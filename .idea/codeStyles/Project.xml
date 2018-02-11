@@ -1,15 +1,5 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
-    <HTMLCodeStyleSettings>
-      <option name="HTML_ALIGN_TEXT" value="true" />
-      <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
-      <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="" />
-      <option name="HTML_ELEMENTS_TO_REMOVE_NEW_LINE_BEFORE" value="" />
-      <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="" />
-      <option name="HTML_KEEP_WHITESPACES_INSIDE" value="" />
-      <option name="HTML_INLINE_ELEMENTS" value="" />
-      <option name="HTML_DONT_ADD_BREAKS_IF_INLINE_CONTENT" value="" />
-    </HTMLCodeStyleSettings>
     <codeStyleSettings language="kotlin">
       <indentOptions>
         <option name="INDENT_SIZE" value="2" />
