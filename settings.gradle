@@ -1,4 +1,0 @@
-rootProject.name = 'Blog'
-include 'Website'
-include 'JavaScript'
-
