@@ -12,3 +12,5 @@ markdown: kramdown
 domain: tented.top
 repository: https://github.com/HoshinoTented/hoshinotented.github.io
 repository_name: hoshinotented.github.io
+paginate: 9
+paginate_path: "blog/page:num"
