@@ -1,5 +1,4 @@
 .hljs-built_in,
-.hljs-kt-class,
 .hljs-type{
 	color: #8AB8EC;
 }
@@ -14,4 +13,8 @@
 
 .hljs-string{
 	color: #6a8759;
+}
+
+pre.code{
+	display: none;
 }
