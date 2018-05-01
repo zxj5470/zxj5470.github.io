@@ -1,10 +1,7 @@
-# Cache
 _site
 .sass-cache
+.jekyll-metadata
+
 Gemfile.lock
-
-# IDEA
-.idea
-
-#VSCode
-.vscode
+will-*/
+exclude/

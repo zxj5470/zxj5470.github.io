@@ -1,16 +1,27 @@
-title: 极寒之域--雾之湖
-author: HoshinoTented
-keywords: HoshinoTented, blog, cirno
-twitter: LimbolRain
-email: limbolrain@gmail.com
-description: >
-  Hoshi no Blog
-baseurl: ""
-url: "http://www.tented.top"
-github_username: HoshinoTented
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: zxj5470
+email: zxj5470@foxmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  ~\(≧▽≦)/~
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: zxj5470
+github_username:  zxj5470
+exclude: ['exclude','will-*']
+# Build settings
 markdown: kramdown
-domain: tented.top
-repository: https://github.com/HoshinoTented/hoshinotented.github.io
-repository_name: hoshinotented.github.io
-paginate: 9
-paginate_path: "blog/page:num"
+theme: minima
