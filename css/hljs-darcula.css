@@ -1,0 +1,18 @@
+.hljs-built_in{
+	color: #8AB8EC;
+}
+.hljs-number{
+	color: #6897bb;
+}
+.hljs-string{
+	color: #6a8759;
+}
+
+.hljs-class .hljs-title,
+.hljs-kt-class{
+	color: #8AB8EC;
+}
+
+/* .hljs-function{ */
+	/* color: #FFC66D; */
+/* } */

@@ -2,9 +2,21 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
-
-  <body>
-
+  <script>
+    function lateinit(){
+      hljs.configure({tabReplace: '    '})
+      $('span.n').each((i,b)=>{
+        if($(b).prev().prev().attr('class')=='py'){
+          $(b).addClass('hljs-kt-class')
+        }
+      })
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    }
+    </script>
+  <body onload="lateinit()">
+    
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
