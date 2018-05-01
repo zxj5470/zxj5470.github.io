@@ -1,18 +1,17 @@
-.hljs-built_in{
+.hljs-built_in,
+.hljs-kt-class,
+.hljs-type{
 	color: #8AB8EC;
 }
+
+.hljs-title{
+	color: #FFC66D;
+}
+
 .hljs-number{
 	color: #6897bb;
 }
+
 .hljs-string{
 	color: #6a8759;
 }
-
-.hljs-class .hljs-title,
-.hljs-kt-class{
-	color: #8AB8EC;
-}
-
-/* .hljs-function{ */
-	/* color: #FFC66D; */
-/* } */

@@ -5,14 +5,15 @@
   <script>
     function lateinit(){
       hljs.configure({tabReplace: '    '})
-      $('span.n').each((i,b)=>{
-        if($(b).prev().prev().attr('class')=='py'){
-          $(b).addClass('hljs-kt-class')
-        }
-      })
       $('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
       });
+      /*
+      $("span.hljs-function").each(function(i, block) {
+        console.log($(block).children().each((index,v)=>{
+        }));
+      });
+      */
     }
     </script>
   <body onload="lateinit()">
