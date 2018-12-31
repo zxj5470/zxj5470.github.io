@@ -23,7 +23,7 @@ twitter_username: zxj5470
 github_username:  zxj5470
 exclude: ['exclude']
 # Build settings
-markdown: kramdown
+markdown: maruku
 kramdown:
    syntax_highlighter_opts:
       disable : true
