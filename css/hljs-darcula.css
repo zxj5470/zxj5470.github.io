@@ -18,3 +18,7 @@
 pre.code{
 	display: none;
 }
+
+pre, code{
+	background-color: #2b2b2b;
+}
