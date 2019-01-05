@@ -12,7 +12,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/julia.min.js"></script>
   <!-- julia-repl -->
   <script>
-    hljs.registerLanguage("julia-repl",function(a){return{c:[{cN:"meta",b:/pkg>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]},{cN:"string",b:/'(.|\\[xXuU][a-zA-Z0-9]+)'/}]}});
+    hljs.registerLanguage("julia-repl",function(a){return{c:[{cN:"meta",b:/pkg>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]},{cN:"string",b:/'(.|\\[xXuU][a-zA-Z0-9]+)'/},{cN:"keyword",b:"\\b(((registry|add|remove)\\s+)\\b"}]}});
   </script>
   <script src="//cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
   {% if page.use_math %}
