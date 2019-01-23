@@ -9,7 +9,7 @@ categories: algorithm
 * 1. [ 链表 linkedlist](#linkedlist)
 	* 1.1. [ 翻转列表 reverse the  linkedlist](#reversethelinkedlist)
 	* 1.2. [ 返回链表中倒数第 n 个节点 Returns the nth reciprocal node in a linked list](#nReturnsthenthreciprocalnodeinalinkedlist)
-	* 1.3. [ 存在循环 ring](#ring)
+	* 1.3. [ 判断链表是否存在环 Ring Exists](#RingExists)
 		* 1.3.1. [若单链表有环，如何找出环的入口节点。 If the single-chain table has a ring, how to find the entry node of the ring.](#Ifthesingle-chaintablehasaringhowtofindtheentrynodeofthering.)
 * 2. [栈和队列　Stack and queue](#Stackandqueue)
 
@@ -49,20 +49,22 @@ ListNode* ReverseList(ListNode* pHead) {
 - 倒数第 n 个就让一个指针先走 n 步
 - 然后再让两个一起走
 - 先走的那个到末尾了。那么，慢走的那个就到了倒数第 n 位。
-###  1.3. <a name='ring'></a> 存在循环 ring
+###  1.3. <a name='RingExists'></a> 判断链表是否存在环 Ring Exists
 > 居然有人说直接用快慢指针是错误答案？
 
 - 快慢指针法
 快指针 pf (pointer fast) 每次移动2个节点，慢指针 ps (pointer slowly) 每次移动1个节点，如果快指针能够追上慢指针，那就说明其中有一个环，否则不存在环。
 
-好像也没啥问题吧？
+这没啥问题吧？！！
+
+某网站某博客的神逻辑：
 
 > 想像一种情况，当快指针走到一个环的时候，慢指针还离快指针很远，甚至当快指针走出环的时候慢指针还没到达环，这时候快指针永远不会追上慢指针。所以快慢指针无法解决链表存在循环的问题，快慢指针能解决的只是链表存在环的问题，也就是这个循环在链表尾部。可以说链表存在环是链表存在循环的一种特殊情况。
 
-您都成环了啊喂！
+您都成环了啊喂！当这是过山车吗？
 
 - map 存储映射
-通过使用 stl 库中的 map 表进行映射。定义 map<Node*, int> m; 将每个 Node* 映射为数组下标，并赋值为一个 int 。然后从链表的头指针开始往后遍历，每次遇到一个指针p，就判断 m[p] 是否为0。如果为0，则将m[p]赋值为1，表示该节点第一次访问；而如果m[p]的值为1，则说明这个节点已经被访问过一次了，于是就形成了环。
+使用 `map` 进行映射。定义 `map<Node*, int> m` 将每个 `Node*` 映射为数组下标，并赋值为一个 `int` 。然后从链表的头指针开始往后遍历，每次遇到一个指针p，就判断 `m[p]` 是否为0。如果为0，则将 `m[p]` 赋值为1，表示该节点第一次访问；而如果 `m[p]` 的值为1，则说明这个节点已经被访问过一次了，于是就形成了环。
 
 ####  1.3.1. <a name='Ifthesingle-chaintablehasaringhowtofindtheentrynodeofthering.'></a>若单链表有环，如何找出环的入口节点。 If the single-chain table has a ring, how to find the entry node of the ring.
 同上……如果用 map 来存储那么一切都很简单了……如果再次访问到 1 就说明到了。
@@ -70,7 +72,11 @@ ListNode* ReverseList(ListNode* pHead) {
 先得计算出环的长度 n ……（如何计算？再绕一圈然后计数）
 > 然后，有点神奇
 
-然后再从头开始用两个指针，一个先走 长度 n，然后再以相同的步幅同时走。再能相遇就是对应的位置。(因为两个间隔是 N，环的长度也是 N，两个能相遇的时候就是两个间隔 N 的时候)
+- 再从头开始用两个指针
+- 一个先走 长度 n
+- 然后两个再以相同的步幅同时走。
+- 再能相遇就是对应的要求的入口节点位置。
+(为什么？因为两个指针的间隔是 N，环的长度也是 N，两个能相遇的时候就是两个间隔 N 的时候)
 
 ##  2. <a name='Stackandqueue'></a>栈和队列　Stack and queue
 ###　两个栈实现队列　Two stack implementation queue
