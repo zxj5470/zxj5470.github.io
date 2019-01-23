@@ -11,6 +11,7 @@ categories: algorithm
 	* 1.2. [ 返回链表中倒数第 n 个节点 Returns the nth reciprocal node in a linked list](#nReturnsthenthreciprocalnodeinalinkedlist)
 	* 1.3. [ 判断链表是否存在环 Ring Exists](#RingExists)
 		* 1.3.1. [若单链表有环，如何找出环的入口节点。 If the single-chain table has a ring, how to find the entry node of the ring.](#Ifthesingle-chaintablehasaringhowtofindtheentrynodeofthering.)
+	* 1.4. [链表去重 remove duplicate elements](#removeduplicateelements)
 * 2. [栈和队列　Stack and queue](#Stackandqueue)
 
 <!-- vscode-markdown-toc-config
@@ -77,6 +78,17 @@ ListNode* ReverseList(ListNode* pHead) {
 - 然后两个再以相同的步幅同时走。
 - 再能相遇就是对应的要求的入口节点位置。
 (为什么？因为两个指针的间隔是 N，环的长度也是 N，两个能相遇的时候就是两个间隔 N 的时候)
+###  1.4. <a name='removeduplicateelements'></a>链表去重 remove duplicate elements
+- 方法一，最简单粗暴的
+（我都不想讲了……太丢人了）
+知道数组怎么暴力的吧……道理一样……
 
+- 用一个map（好了，勉强看起来不那么暴力）
+1. 建立一个hash表，key为链表中已经遍历的节点内容，初始时为空。 
+2. 从头开始遍历单链表中的节点。 
+3. 如果节点内容已经在hash表中存在，则删除此节点，继续向后遍历。 
+4. 如果节点内容不在hash表中，则保留此节点，将节点内容添加到hash表中，继续向后遍历。 
+
+（注意删除时需要知道前一节点。）
 ##  2. <a name='Stackandqueue'></a>栈和队列　Stack and queue
 ###　两个栈实现队列　Two stack implementation queue
