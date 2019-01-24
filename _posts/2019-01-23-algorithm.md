@@ -91,4 +91,32 @@ ListNode* ReverseList(ListNode* pHead) {
 
 （注意删除时需要知道前一节点。）
 ##  2. <a name='Stackandqueue'></a>栈和队列　Stack and queue
+
 ###　两个栈实现队列　Two stack implementation queue
+- 入队：直接把元素压入 stack1 中；
+- 出队：
+    - 若 stack2 中不为空，则直接弹出 stack2 中的元素；
+    - 若 stack2 中为空，则将 stack1 中的所有元素倒入 stack2 中，然后弹出 stack2 的栈顶元素。
+    - 若两个栈都为空，则队列为空队，无法出队。
+
+```java
+T pop() {
+    if (!stack2.isEmpty()) {
+        return stack2.pop();
+    } else { // if stack2 isEmpty
+        while (!stack1.isEmpty()) {
+            stack2.push(stack1.pop());
+        }
+        return stack2.pop();
+    }`
+}
+```
+
+好像有点不能理解？
+入队时非常简单。在出队时，多数情况下可以直接通过弹出 stack2 完成。如果把stack1中的元素倒入stack2中，则一般不用每次都进行这样的操作。最坏的情况就是出队一个元素、入队一个元素这样的循环，导致每次出队都需要转移元素。
+
+思考的内容：
+- 一定得是 stack2 空了才能让 1 的东西进来。（为什么呢？因为这是已有的顺序，1 只是暂存倒序，栈全部逆置了再依次出就是队列的出队顺序了）
+- 同样道理，2 里面也就是已有的顺序。已有的：出队顺序。
+
+哇，这个好鸡贼啊。
