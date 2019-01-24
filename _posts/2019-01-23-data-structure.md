@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【面试准备】算法"
+title:  "【面试准备】数据结构"
 date:   2019-01-23 20:35:12 +0800
 categories: algorithm
 ---
