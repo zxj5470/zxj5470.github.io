@@ -83,13 +83,13 @@ public static void shellSort(int[] array) {
 void merge_sort_recursive(int[] arr, int[] result, int start, int end) {
 	if (start >= end)
 		return;
-	int len = end - start, mid = (len >> 1) + start;
+	int len = end - start, mid = start + (len >> 1);
 	int start1 = start, end1 = mid;
 	int start2 = mid + 1, end2 = end;
 	merge_sort_recursive(arr, result, start1, end1);
 	merge_sort_recursive(arr, result, start2, end2);
 	int k = start;
-    // merge
+    // merge 合并有序
 	while (start1 <= end1 && start2 <= end2)
 		result[k++] = arr[start1] < arr[start2] ? arr[start1++] : arr[start2++];
 	while (start1 <= end1)
