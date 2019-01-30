@@ -13,6 +13,7 @@ categories: algorithm
 	* 1.3. [插入排序 Insertion sort](#Insertionsort)
 	* 1.4. [希尔排序 shell sort](#shellsort)
 	* 1.5. [归并排序 merge sort](#mergesort)
+	* 1.6. [快排 quick sort](#quicksort)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -99,4 +100,37 @@ void merge_sort_recursive(int[] arr, int[] result, int start, int end) {
 	for (k = start; k <= end; k++)
 		arr[k] = result[k];
 }
+```
+
+###  1.6. <a name='quicksort'></a>快排 quick sort
+步骤：
+- 从数列中挑出一个元素，称为“基准”（pivot）。此处用位于数据中间的作为基准。
+- 重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准后面（相同的数可以到任何一边）。在这个分割结束之后，该基准就处于数列的中间位置。这个称为分割（partition）操作。
+- 递归地把小于基准值元素的子数列和大于基准值元素的子数列排序。
+```java
+void qSort(int[] arr, int head, int tail) {
+        if (head >= tail || arr == null || arr.length <= 1) {
+            return;
+        }
+        int i = head, j = tail, pivot = arr[(head + tail) / 2];
+        while (i <= j) {
+            while (arr[i] < pivot) {
+                ++i;
+            }
+            while (arr[j] > pivot) {
+                --j;
+            }
+            if (i < j) {
+                int t = arr[i];
+                arr[i] = arr[j];
+                arr[j] = t;
+                ++i;
+                --j;
+            } else if (i == j) {
+                ++i;
+            }
+        }
+        qSort(arr, head, j);
+        qSort(arr, i, tail);
+    }
 ```
